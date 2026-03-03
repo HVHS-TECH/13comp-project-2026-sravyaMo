@@ -7,6 +7,7 @@
   
   <!-- stylesheets *******************************************-->
   <link rel="stylesheet" type="text/css" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="/css/index.css">
 
   <!-- firebase start ****************************************-->
   <!-- firebase end ******************************************-->
@@ -16,14 +17,15 @@
 <!--*************************************************************
   BODY
 **************************************************************-->
-<body>
+<body onload="fb_initialise()">
   <header>
-    <h1>"Welcome to my game site!"</h1>
-    
+    <h1>Welcome to Sravya's game site!</h1>
+    <h3>please login/register to continue:</h3>
+    <button onclick="fb_authenticate()">Login/Register</button>
     
     
 <!-- Your JS files & main module ***************************-->
-    
+    <script type="module" src=".main.mjs"></script>
 </body>
 </html>
 <!--*************************************************************
