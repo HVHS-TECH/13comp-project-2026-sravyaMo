@@ -8,13 +8,15 @@ const COL_B = '#CD7F32';	//  console.log for functions scheme
 console.log('%c main.mjs', 
     'color: blue; background-color: white;');
 
+fb_initialise();
+
 /**************************************************************/
 // Import all external constants & functions required
 /**************************************************************/
 // Import all the constants & functions required from fb_io module
 import { fb_initialise, fb_authenticate, fb_detectLoginChange, fb_logout,
          fb_writeRecords, fb_readRecords, fb_readAll, fb_updateRecords } 
-    from '../fb_io.mjs';
+    from './fb_io.mjs';
 
 
     window.fb_initialise   = fb_initialise;
