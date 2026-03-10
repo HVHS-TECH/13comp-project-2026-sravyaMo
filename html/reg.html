@@ -4,10 +4,9 @@
   <title>Database</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/x-icon" href="../images/spaceship.png">
   
   <!-- stylesheets *******************************************-->
-  <link rel="stylesheet" href="/css/aa_style.css">
+  <link rel="stylesheet" href="/css/reg.css">
 
   <!-- firebase start ****************************************-->
     <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
@@ -25,16 +24,45 @@
 **************************************************************-->
 <body>
   <form id="f_userDetails" onsubmit="return false;">
-  <label for="displayName">displayName:</label><br>
-  <input type="text" id="displayName" name="displayName" disabled><br>
-  <label for="email">Email:</label><br>
-  <input type="email" id="email" name="email" disabled><br><br>
+
+  <label for="displayName">Username:</label><br>
+  <input type="text" id="displayName" name="displayName pattern="[a-zA-Z]{3,9}" required><br>
+
+  <label for="gender">Gender:</label><br>
+  
+  <input type="radio" id="female" name="gender" value="female">
+  <label for="female">Female</label><br>
+  <input type="radio" id="male" name="gender" value="male">
+  <label for="male">Male</label><br>
+  <input type="radio" id="other" name="gender" value="other">
+  <label for="other">Other</label><br>
+  <input type="radio" id="psay" name="gender" value="psay">
+  <label for="psay">Prefer not to say</label><br>
+
   <label for="age">Age:</label><br>
   <input type="number" id="age" name="age" min="1" max="120" required><br><br>
-  <label for="sex">Sex:</label><br>
-  <input type="text" id="sex" name="sex" required><br><br>
 
-  <button onclick="getUserInput()" id="register" value="submit" input type="submit">ENTER</button>
+  <label for="pnumber">Phone Number:</label><br>
+  <input type="tel" id="pnumber" name="pnumber" placeholder="012-345-6789"
+   title="012-345-6789" pattern="[0-9]{3} [0-9]{3} [0-9]{4}" required><
+
+  <label for="address">Address:</label><br>
+  <input type="text" id="address" name="address" ><br>
+
+  <label for="dob">Date of Birth:</label><br>
+  <input type="text" id="dob" name="dob" ><br>
+
+  <label for="ethnicity">Ethnicity:</label><br>
+  <input type="radio" id="euro" name="gender" value="euro">
+  <label for="euro">European</label><br>
+  <input type="radio" id="maori" name="gender" value="maori">
+  <label for="maori">Maori</label><br>
+  <input type="radio" id="asian" name="gender" value="asian">
+  <label for="asian">Asian</label><br>
+  <input type="radio" id="oth" name="gender" value="oth">
+  <label for="oth">Other</label><br>
+
+  <button onclick="getUserInput()" id="register" value="submit" input type="submit">Register</button>
 
 </form> 
 </body>
