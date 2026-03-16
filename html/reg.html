@@ -27,41 +27,47 @@
 
   <label for="displayName">Username:</label><br>
   <input type="text" id="displayName" pattern="[a-zA-Z]{3,15}" 
-  placeholder="3-15 capital/lowercase letters" title="3-15 capital/lowercase letters"required><br>
+  placeholder="3-15 capital/lowercase letters" title="3-15 capital/lowercase letters"required>	<br><br>
+
+  <label for="favcolor">Select your favorite color:</label>
+  <input type="color" id="favcolor" name="favcolor" value="#ff0000" required>
+  <br><br>
 
   <label for="gender">Gender:</label><br>
   
-  <input type="radio" id="female" name="gender" value="female">
+  <input type="radio" id="female" name="gender" value="female" required>
   <label for="female">Female</label><br>
-  <input type="radio" id="male" name="gender" value="male">
+  <input type="radio" id="male" name="gender" value="male" required>
   <label for="male">Male</label><br>
-  <input type="radio" id="other" name="gender" value="other">
+  <input type="radio" id="other" name="gender" value="other" required>
   <label for="other">Other</label><br>
-  <input type="radio" id="psay" name="gender" value="prefer not to say">
-  <label for="psay">Prefer not to say</label><br>
+  <input type="radio" id="psay" name="gender" value="prefer not to say" required>
+  <label for="psay">Prefer not to say</label>
+  <br><br>
 
   <label for="age">Age:</label><br>
-  <input type="number" id="age" name="age" min="1" max="120" required><br><br>
+  <input type="number" id="age" name="age" min="1" max="120" required>
+  <br><br>
 
   <label for="pnumber">Phone Number:</label><br>
   <input type="tel" id="pnumber" name="pnumber" placeholder="012 345 6789"
-   title="012 345 6789" pattern="[0-9]{3} [0-9]{3} [0-9]{4}" required><br>
+   title="012 345 6789" pattern="[0-9]{3} [0-9]{3} [0-9]{4}" required>
+   <br><br>
 
-  <label for="address">Address:</label><br>
-  <input type="text" id="address" name="address"><br>
-
-  <label for="dob">Date of Birth:</label>
-  <input type="date" id="dob" name="date of birth" min="1900-01-01" max="2025-12-31" required><br>
+  <label for="dob">Date of Birth:</label><br>
+  <input type="date" id="dob" name="date of birth" min="1900-01-01" max="2025-12-31" required>	<br><br>
 
   <label for="ethnicity">Ethnicity:</label><br>
-  <input type="radio" id="euro" name="gender" value="european" required>
+  
+  <input type="radio" id="euro" name="ethnic" value="european" required>
   <label for="euro">European</label><br>
-  <input type="radio" id="maori" name="gender" value="maori">
+  <input type="radio" id="maori" name="ethnic" value="maori" required>
   <label for="maori">Maori</label><br>
-  <input type="radio" id="asian" name="gender" value="asian">
+  <input type="radio" id="asian" name="ethnic" value="asian" required>
   <label for="asian">Asian</label><br>
-  <input type="radio" id="oth" name="gender" value="other">
-  <label for="oth">Other</label><br>
+  <input type="radio" id="oth" name="ethnic" value="other" required>
+  <label for="oth">Other</label>
+  <br><br><br>
 
   <button onclick="getUserInput()" id="register" value="submit" input type="submit">Register</button>
 
