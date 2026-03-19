@@ -29,6 +29,7 @@ export function getUserInput() {
     if (document.getElementById('f_userDetails').checkValidity()) {
         // get values from the form
         const displayName = document.getElementById("displayName").value;
+        const email = document.getElementById("email").value;
         const favcolor = document.getElementById("favcolor").value;
         const gender = document.getElementById("gender").value;
         const age = document.getElementById("age").value;
@@ -38,10 +39,10 @@ export function getUserInput() {
 
         console.log("displayName:", displayName);
         console.log("Email:", email);
-        console.log("favcolor:", favouriteColor);
+        console.log("favouritecolor:", favcolor);
         console.log("gender:", gender);
-        console.log("pnumber:", phoneNumber);
-        console.log("dob:", dateOfBirth);
+        console.log("phone number:", pnumber);
+        console.log("dob:", dob);
         console.log("ethnicity:", ethnicity);
 
         fb_writeRecords(fb_userDetails);

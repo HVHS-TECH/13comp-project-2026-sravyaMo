@@ -71,7 +71,7 @@ const FB_GAMECONFIG = {
 };
                 
     const FB_GAMEAPP = initializeApp(FB_GAMECONFIG);
-    FB_GAMEDB  = getDatabase(FB_GAMEAPP);
+    FB_GAMEDB = getDatabase(FB_GAMEAPP);
     console.info(FB_GAMEDB);         	//DIAG
 }
 
@@ -212,6 +212,7 @@ function fb_logout() {
 // Return: n/a
 /******************************************************/
 function fb_writeRecords() {
+    console.log('FB_GAMEDB: SUCCESSFUL', FB_GAMEDB);
     console.log('%c fb_writeRecords(): path/key = ' + 'userDetails/' + fb_userDetails.uid,
                 'color: ' + COL_C + '; background-color: ' + COL_B + ';');
 
