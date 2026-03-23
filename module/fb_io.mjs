@@ -122,11 +122,11 @@ function fb_authenticate() {
                         if (fb_data != null) {
                             // ADMIN: Successful read
                             sessionStorage.setItem('admin', 'Y');
-                            window.location.href='/html/select_game.html';
+                            window.location.href='html/select_game.html';
                         } else {
                             // ADMIN: Successful read BUT no record found
                             sessionStorage.setItem('admin', 'N');
-                            window.location.href='/html/select_game.html';
+                            window.location.href='html/select_game.html';
                         }
                     }).catch((error) => {
                         // ADMIN: read error
@@ -135,7 +135,7 @@ function fb_authenticate() {
             /*****************************************************/
             } else {
                 // FB_USERDETAILS: Successful read BUT no record found
-                window.location.href='/html/reg.html';
+                window.location.href='html/reg.html';
             }
         }).catch((error) => {
             // FB_USERDETAILS: read error
