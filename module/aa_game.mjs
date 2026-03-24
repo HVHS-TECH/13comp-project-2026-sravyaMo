@@ -8,6 +8,7 @@
 /********************************************************/
 // variables
 /********************************************************/
+
 const LS_COL_C = 'black';
 const LS_COL_B = 'cyan';
 console.log('%c alienAnnihilator.js',
@@ -236,7 +237,7 @@ function draw() {
 	if (startBtn.mouse.presses()) {
 		console.log("pressed");
 		if (lives <= 0) {
-			window.location.href='alienAnnihilator.html';
+			window.location.href='aa_game.html';
 		}
 		if (gameActive==false) {
 			startBtn.color = 'red';

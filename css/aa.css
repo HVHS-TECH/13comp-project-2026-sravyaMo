@@ -1,0 +1,63 @@
+body {
+    font-family: Courier;
+    color: #e8e0e0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    font-size: 30px;
+    background-image: url("/images/homepage.png");
+  }
+  
+  .container {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .column {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+  
+  button {
+    padding: 15px 10px;
+    font-size: 37px;
+    cursor: pointer;
+    border: none;
+    border-radius: 18px;
+    background-color: #007bff;
+    color: #fff;
+    transition: background-color 0.3ss;
+    width: 450px; /* Set a fixed width */
+    text-align: center;
+  }
+
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+
+  instructions.container {
+    padding: 10px 20px;
+    font-size: 50px;
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+    background-color: #2b639f;
+    color: #fff;
+    transition: background-color 0.3s;
+    width: 220px; /* Set a fixed width */
+    text-align: center;
+  }
+
+  gameplay.sidebar {
+    font-family: Courier;
+    color: #e8e0e0;
+    justify-content: left;
+    display: flex;
+    justify-content: center;
+    align-items: ;
+    margin: 0;
+    font-size: 30px;
+  }
