@@ -162,19 +162,19 @@ export function ad_AA() {
 }
 
 /**************************************************************/
-// ad_BB()
+// ad_GTN()
 // Input event; called when admin's BB button clicked
 // Display BB (Space Invaders) admin screen
 // Input:  n/a
 // Return: n/a
 /**************************************************************/
 export function ad_GTN() {
-  console.log('%c ad_BB(): ',
+  console.log('%c ad_GTN(): ',
               'color: ' + AD_COL_C + '; background-color: ' + AD_COL_B + ';');
   
   ad_alterClass('ad_btn', 'grey');
   document.getElementById("b_ad_GTN").style.backgroundColor   = "cyan";
-  ad_readAll(BB, null, ad_processBBReadAll);                            //<=======
+  ad_readAll(GTN, null, ad_processBBReadAll);                            //<=======
 }
 
 /*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/

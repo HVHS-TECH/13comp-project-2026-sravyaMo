@@ -33,6 +33,7 @@ const MAXLIVES = 3;
 const MINSCORE = 0;
 var wallGroup, wallTop, wallBot;
 var startBtn;
+var backBtn;
 var lives = MAXLIVES;
 var score = MINSCORE;
 var gameActive = false;
@@ -64,6 +65,7 @@ function setup() {
 	createAsteroids();
 	createAliens();
 	createStartBtn();
+	createBackBtn();
 
 	textSize(25);
     fill(255);
@@ -146,6 +148,19 @@ function createStartBtn() {
 	startBtn.color = "green";
 }
 
+/********************************************************/
+// createBackBtn()
+// Called by setup()
+// Creates back button
+// Input:  n/a
+// return: n/a
+/********************************************************/
+function createBackBtn() {
+	backBtn = new Sprite(60, 90, 80, 30, 's');
+	backBtn.text = "back";
+	backBtn.color = "blue";
+}
+
 /*******************************************************/
 // createAliens()
 // Called by ?
@@ -198,6 +213,8 @@ function draw() {
         //noloop();
 		startBtn.color = 'green';
 	 	startBtn.text = "play";
+		backBtn.color = 'blue';
+	 	backBtn.text = "back";
 	 	asteroidGroup.remove();
 	 	alienGroup.remove();
 	 	spaceship.remove();
@@ -233,6 +250,16 @@ function draw() {
 	// Detect mouse START/PAUSE
 	if (startBtn.mouse.hovering()) mouse.cursor = 'grab';
 	else mouse.cursor = 'default';
+
+	// Detect mouse START/PAUSE
+	if (backBtn.mouse.hovering()) mouse.cursor = 'grab';
+	else mouse.cursor = 'default';
+
+
+	if (backBtn.mouse.presses()) {
+		console.log("back pressed");
+		window.location.href='aa_lobby.html';
+	}
 
 	if (startBtn.mouse.presses()) {
 		console.log("pressed");
