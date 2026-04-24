@@ -109,8 +109,8 @@ function fb_authenticate() {
        /*****************************************************/
        //Read fb_userDetails
 
-       const FB_DBREF_UD= ref(FB_GAMEDB, 'userDetails/' + fb_userDetails.uid);
-        get(FB_DBREF_UD).then((snapshot) => {
+       const FB_DBREF_AD= ref(FB_GAMEDB, 'userDetails/' + fb_userDetails.uid);  //changed from UD to AD(if not work change back)
+        get(FB_DBREF_AD).then((snapshot) => {
             const fb_data = snapshot.val();
             if (fb_data != null) {
             // FB_USERDETAILS: successful read
