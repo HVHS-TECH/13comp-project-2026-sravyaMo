@@ -14,23 +14,20 @@
   
   <!-- JQUERY ************************************************-->
   
+  <title>The computer has randomely selected a number from 1 to 100</title>
  </head>
 <!--*************************************************************
   BODY
 **************************************************************-->
 <body>
-  <div class="game-container">
-    <h1>The computer has randomely selected a number from 1 to 100</h1>
-    <h2>Guess a number from 1-100!</h2>
-
-    <div id="turn-indicator"> Player 1's turn</div>  <!.I can switch username later..>
-    <input type="number" id="guess" placeholder="enter number from 1-100" min="1" max="100">
-    <button id="guessbtn">Guess</button>
-
-    <p id="message"></p>
-    <button id="resetbtn" style="display: none;">Play again</button>
+  <div class="wrapper">
+    <header>Guess a number from 1-100!</header>
+    <p class="guess"></p>
+    <div class="input-field">
+      <input type="number">
+      <button>Guess</button>
+    </div>
   </div>
-  
   <script src="/module/gtn_game.mjs"></script>   
 </body>
 </html>
