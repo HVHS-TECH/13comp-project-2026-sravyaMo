@@ -63,3 +63,19 @@ input::-webkit-inner-spin-button,
 input::-webkit-outer-spin-button {
     display: none;
 }
+
+.input-field input:disabled {
+    cursor: not-allowed;
+}
+
+.input-field button {
+    border: none;
+    background: #4a984a;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.input-field button:active {
+    transform: scale(0.97);
+}
