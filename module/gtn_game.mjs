@@ -43,7 +43,7 @@ checkButton.addEventListener("click", () => {
       showMessage("Correct number guessed!", "#27ae60");
       input.disabled = true;
       checkButton.textContent = "Replay";
-    } else if (inputValue > randomNum && inputValue < 100) { //guess too high
+    } else if (inputValue > randomNum && inputValue <= 100) { //guess too high
         showMessage("Guess too high!");
     } else if (inputValue < randomNum && inputValue > 0) { //guess too low
         showMessage("Guess too low!");
