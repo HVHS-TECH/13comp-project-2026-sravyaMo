@@ -3,6 +3,16 @@ const input = document.querySelector("input");
 const guess = document.querySelector(".guess");
 const checkButton = document.querySelector("button");
 
+function showMessage(text, color = "#333") {
+  guess.textContent = text;
+  guess.style.color = color;
+ 
+ // restart animation every single time
+guess.classList.remove("blink");
+void guess.offsetWidth;
+guess.classList.add("blink");
+}
+
 //sets the initial focus on input field
 input.focus();
 
@@ -30,16 +40,20 @@ checkButton.addEventListener("click", () => {
     let inputValue = input.value; //gets value from input page
 
     if (inputValue == randomNum) { // correct guess
-        [guess.textContent, input.disabled] = ["Correct number guessed!", true];
-        [checkButton.textContent, guess.style.color] = ["Replay", "#27ae60"];
+      showMessage("Correct number guessed!", "#27ae60");
+      input.disabled = true;
+      checkButton.textContent = "Replay";
     } else if (inputValue > randomNum && inputValue < 100) { //guess too high
-        [guess.textContent] = ["Guess too high"];
-        guess.style.color = "#333";
+        showMessage("Guess too high!");
     } else if (inputValue < randomNum && inputValue > 0) { //guess too low
-        [guess.textContent] = ["Guess too low"];
-        guess.style.color = "#333";
+        showMessage("Guess too low!");
     } else { // for invalid input not in range 1-99
-        [guess.textContent] = ["Invalid guess!"];
-        guess.style.color = "#e74c3c";
-    } 
+        showMessage("Invalid guess!", "#e74c3c");
+    }
+});
+
+input.addEventListener("keydown", (e) => {
+  if (e.key === "Enter") {
+    checkButton.click();
+  }
 });
