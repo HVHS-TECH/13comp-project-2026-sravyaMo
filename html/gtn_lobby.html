@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Welocme to the Guess the Number Lobby</title>
+  <title>Welocme to my Guess the Number Lobby</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/x-icon" href="../images/spaceship.png">
@@ -27,10 +27,35 @@
 <body>
  <div class="wrapper">
   <h1>Guess the Number Lobby</h1>
+
   <p>Create or join a server!</p>
+
+  <div class="lobby-buttons">
+    <button id="createBtn">Create a server</button>
+    <button id="joinBtn">Join a server</button>
+  </div>
   
  </div>
+
+ <------- The create/join popup(seems easier than adding another page) ----------->
+ <div class="popup hidden">
+
+  <div class="popup-box">
+
+    <h2 id="popupTitle">Create a server</h2>
+    <input type="text" id="serverInput" maxlength="12" placeholder="Enter server name here">
+
+    <p class="popup-message"></p>
+
+    <div class="popup-buttons">
+      <button id="submitBtn">Submit</button>
+      <button id="closeBtn">Close</button>
+    </div>
+
+  </div>
+ </div>
     
+<script type="module" src="/module/gtn_game.mjs"
 </body>
 </html>
 <!--*************************************************************
