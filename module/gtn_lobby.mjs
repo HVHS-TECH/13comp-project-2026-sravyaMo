@@ -60,7 +60,7 @@ submitBtn.addEventListener("click", () => {
     localStorage.setItem("roomMode", mode);
 
     // Move to game
-    window.location.href = "/html/gtn_game.html";
+    window.location.href = "/html/gtn_lobby.html";
 });
 
 // Enter key support
