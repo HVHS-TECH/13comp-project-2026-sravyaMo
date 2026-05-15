@@ -34,5 +34,41 @@ function showMessage(text, color = "#333") {
 
 // Resets game
 const resetGame = () => {
-    
-}
+    randomNum = Math.floor(Math.random() * 100) + 1;
+    input.disabled = false;
+    input.value = "";
+    guess.textContent = "";
+    checkButton.textContent = "Guess";
+};
+
+// Guess button
+checkButton.addEventListener("click", () => {
+    if (input.disabled) {
+        resetGame();
+        return;
+    }
+
+    const inputValue = Number(input.value);
+
+    if (inputValue === randomNum) {
+        showMessage("correct number guessed!", "#27ae60");
+        input.disabled = true;
+        checkButton.textContent = "Replay";
+    }
+    else if (inputValue > randomNum && inputValue <= 100) {
+        showMessage("Guess too high!");
+    }
+    else if (inputValue < randomNum && inputValue > 100) {
+        showMessage("Guess too low!");
+    }
+    else {
+        showMessage("Invalid guess", "#e743c3c");
+    }
+});
+
+// Enter key
+input.addEventListener("keydown", (e) => {
+    if (e.key === "Enter") {
+        checkButton.click();
+    }
+});
