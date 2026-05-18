@@ -69,3 +69,4 @@ serverInput.addEventListener("keydown", (e) => {
         submitBtn.click();
     }
 });
+

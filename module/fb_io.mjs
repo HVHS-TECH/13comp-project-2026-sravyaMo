@@ -20,6 +20,13 @@ let fb_userDetails = {
     photoURL:'n/a',
     uid:'n/a' };
 
+let lobbyRecord = {
+    displayName:'n/a',
+    email:'n/a',
+    lobby:
+    servername;
+    uid:'n/a' };
+
 
 /**************************************************************/
 // Import all external constants & functions required
@@ -317,6 +324,7 @@ function fb_updateRecords() {
     });
 }
 
+
 /*****************************************************/
 // fb_sortedRead()
 /******************************************************/
@@ -347,6 +355,22 @@ function fb_sortedRead() {
 }
 
 
+function fb_writeLobby() {
+    console.log('FB_GAMEDB: SUCCESSFUL', FB_GAMEDB);
+    console.log('%c fb_writeRecords(): path/key = ' + 'userDetails/' + fb_userDetails.uid,
+                'color: ' + COL_C + '; background-color: ' + COL_B + ';');
+
+    const dbReference= ref(FB_GAMEDB, 'lobby/uid');
+    set(dbReference, fb_userDetails).then(() => {  //lobbyRecord
+        // Code for a successful write goes here
+        console.log('%c fb_writeRecords(): SUCCESSFUL',
+                'color: ' + COL_C + '; background-color: ' + COL_B + ';');
+        window.location.href='select_game.html';
+    }).catch((error) => {
+        console.error(error);
+        // Code for a write error goes here
+    });
+}
 /**************************************************************/
 // END OF CODE
 /**************************************************************/
