@@ -20,12 +20,14 @@ let fb_userDetails = {
     photoURL:'n/a',
     uid:'n/a' };
 
-let lobbyRecord = {
-    displayName:'n/a',
-    email:'n/a',
-    lobby:
-    servername;
-    uid:'n/a' };
+/************************************************************* */
+// let lobbyRecord = {
+    //displayName:'n/a',
+    //email:'n/a',
+    //lobby:
+    //servername;
+    //uid:'n/a' };
+/***************************************************************** */
 
 
 /**************************************************************/
