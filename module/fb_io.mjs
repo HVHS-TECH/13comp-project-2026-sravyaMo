@@ -357,22 +357,25 @@ function fb_sortedRead() {
 }
 
 
-function fb_writeLobby() {
-    console.log('FB_GAMEDB: SUCCESSFUL', FB_GAMEDB);
-    console.log('%c fb_writeRecords(): path/key = ' + 'userDetails/' + fb_userDetails.uid,
+function fb_writeLobby(servername) {
+    console.log('FB_GAMEDB: Lobby created successfully');
+    console.log('%c fb_writeLobby(): path/key = ' + 'userDetails/' + fb_userDetails.uid,
                 'color: ' + COL_C + '; background-color: ' + COL_B + ';');
 
     const dbReference= ref(FB_GAMEDB, 'lobby/uid');
-    set(dbReference, fb_userDetails).then(() => {  //lobbyRecord
+    set(dbReference, lobbyRecord).then(() => {  //lobbyRecord
         // Code for a successful write goes here
-        console.log('%c fb_writeRecords(): SUCCESSFUL',
+        console.log('%c fb_writeLobby(): Lobby created',
                 'color: ' + COL_C + '; background-color: ' + COL_B + ';');
         window.location.href='select_game.html';
     }).catch((error) => {
-        console.error(error);
+        console.error("There was an error while saving the lobby", error);
         // Code for a write error goes here
     });
 }
+
+
+
 /**************************************************************/
 // END OF CODE
 /**************************************************************/

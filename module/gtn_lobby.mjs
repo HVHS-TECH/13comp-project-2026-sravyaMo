@@ -70,3 +70,40 @@ serverInput.addEventListener("keydown", (e) => {
     }
 });
 
+const lobbyRef =
+    ref(FB_GAMEDB,
+        'lobby/uid/' + lobby.lobbyName
+    );
+
+update(lobbyRef, {
+
+    guestUID:
+        sessionStorage.getItem("uid"),
+
+    guestName:
+        sessionStorage.getItem("displayName"),
+
+    accepted:
+        "yes"
+
+});
+
+// Creating lobby object
+const lobbyRecord = {
+    uid:
+        sessionStorage.getItem("uid"),
+
+    userName:
+        sessionStorage.getItem("displayName"),
+
+    lobbyName:
+        lobbyName,
+
+    accepted:
+        "no"
+};
+
+console.log(
+    "Lobby record being written:",
+    lobbyRecord
+);
