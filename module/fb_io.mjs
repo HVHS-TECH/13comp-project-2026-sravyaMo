@@ -54,7 +54,7 @@ import { ref, set, get, update, query, orderByChild, limitToFirst }
 export { 
     fb_initialise, fb_authenticate, fb_detectLoginChange, fb_logout,
     fb_writeRecords, fb_readRecords, fb_readAll, fb_updateRecords,
-    fb_sortedRead, fb_userDetails, FB_GAMEDB };
+    fb_sortedRead, fb_userDetails, FB_GAMEDB, fb_writeLobby  };
 
 
 /******************************************************/

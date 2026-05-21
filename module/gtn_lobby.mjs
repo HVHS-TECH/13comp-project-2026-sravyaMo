@@ -1,3 +1,11 @@
+import { 
+    fb_initialise, fb_authenticate, fb_detectLoginChange, fb_logout,
+    fb_writeRecords, fb_readRecords, fb_readAll, fb_updateRecords,
+    fb_sortedRead, fb_userDetails, FB_GAMEDB, fb_writeLobby } from './fb_io.mjs';
+
+import { ref, set, get, update, query, orderByChild, limitToFirst }
+    from "https://www.gstatic.com/firebasejs/9.6.1/firebase-database.js";
+
 // Popup elements
 const popup = document.querySelector(".popup");
 const popupTitle = document.querySelector("#popupTitle");
@@ -70,10 +78,7 @@ serverInput.addEventListener("keydown", (e) => {
     }
 });
 
-const lobbyRef =
-    ref(FB_GAMEDB,
-        'lobby/uid/' + lobby.lobbyName
-    );
+const lobbyRef = ref(FB_GAMEDB, 'lobby/uid/' + lobby.lobbyName);
 
 update(lobbyRef, {
 
