@@ -78,7 +78,7 @@ serverInput.addEventListener("keydown", (e) => {
     }
 });
 
-const lobbyRef = ref(FB_GAMEDB, 'lobby/uid/' + lobby.lobbyName);
+const lobbyRef = ref(FB_GAMEDB, 'lobby/' + uid + "lobbyName/");
 
 update(lobbyRef, {
 
