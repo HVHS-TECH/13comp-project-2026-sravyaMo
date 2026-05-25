@@ -1,3 +1,5 @@
+fb_initialise();
+
 import { 
     fb_initialise, fb_authenticate, fb_detectLoginChange, fb_logout,
     fb_writeRecords, fb_readRecords, fb_readAll, fb_updateRecords,
@@ -16,6 +18,9 @@ const createBtn = document.querySelector("#createBtn");
 const joinBtn = document.querySelector("#joinBtn");
 const submitBtn = document.querySelector("#submitBtn");
 const closeBtn = document.querySelector("#submitBtn");
+
+// Lobby list
+const lobbyList = document.querySelector("#lobbyList");
 
 // Input 
 const serverInput = document.querySelector("#serverInput");
@@ -95,17 +100,13 @@ update(lobbyRef, {
 
 // Creating lobby object
 const lobbyRecord = {
-    uid:
-        sessionStorage.getItem("uid"),
+    uid: sessionStorage.getItem("uid"),
 
-    userName:
-        sessionStorage.getItem("displayName"),
+    userName: sessionStorage.getItem("displayName"),
 
-    lobbyName:
-        lobbyName,
+    lobbyName: lobbyName,
 
-    accepted:
-        "no"
+    accepted: "no"
 };
 
 console.log(

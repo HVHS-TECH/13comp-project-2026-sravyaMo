@@ -159,3 +159,55 @@ body {
 .hidden {
     display: none;
 }
+
+.main-layout {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+}
+
+.lobby-list-panel {
+    width: 280px;
+    padding: 25px;
+    border-radius: 25px;
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255,255,255,0.1);
+    box-shadow: 0 0 30px rgba(155,77,255,0.25);
+    color: white;
+}
+
+.lobby-list-panel h2 {
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 24px;
+}
+
+#lobbyList {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.lobby-item {
+    padding: 15px;
+    border-radius: 14px;
+    background: rgba(255,255,255,0.08);
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.lobby-item: hover {
+    background: rgba(255,255,255,0.18);
+    transform: scale(1.02);
+}
+
+.lobby-name {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.lobby-players {
+    font-size: 14px;
+    opacity: 0.7;
+}
