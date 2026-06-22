@@ -25,8 +25,13 @@ const lobbyList = document.querySelector("#lobbyList");
 // Input 
 const serverInput = document.querySelector("#serverInput");
 
+//for fixing lobbyName 
+let lobbyName = "";
+// for fixing uid error
+let uid = "";
+
 // Current mode
-let mode = ""
+let mode = "";
 
 // Opening the "Create" popup
 createBtn.addEventListener("click", () => {

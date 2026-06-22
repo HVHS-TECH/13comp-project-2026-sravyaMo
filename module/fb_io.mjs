@@ -21,12 +21,12 @@ let fb_userDetails = {
     uid:'n/a' };
 
 /************************************************************* */
-// let lobbyRecord = {
-    //displayName:'n/a',
-    //email:'n/a',
-    //lobby:
-    //servername;
-    //uid:'n/a' };
+let lobbyRecord = {
+displayName:'n/a',
+email:'n/a',
+lobby: 'n/a',
+servername:'n/a',
+uid:'n/a' };
 /***************************************************************** */
 
 
@@ -54,7 +54,7 @@ import { ref, set, get, update, query, orderByChild, limitToFirst }
 export { 
     fb_initialise, fb_authenticate, fb_detectLoginChange, fb_logout,
     fb_writeRecords, fb_readRecords, fb_readAll, fb_updateRecords,
-    fb_sortedRead, fb_userDetails, FB_GAMEDB, fb_writeLobby  };
+    fb_sortedRead, fb_userDetails, FB_GAMEDB, lobbyRecord, fb_writeLobby  };
 
 
 /******************************************************/
