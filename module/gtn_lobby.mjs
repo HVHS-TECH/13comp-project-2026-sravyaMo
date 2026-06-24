@@ -1,5 +1,5 @@
 fb_initialise();
-fb_authenticate();
+fb_detectLoginChange();
 import { 
     fb_initialise, fb_authenticate, fb_detectLoginChange, fb_logout,
     fb_writeRecords, fb_readRecords, fb_readAll, fb_updateRecords,
