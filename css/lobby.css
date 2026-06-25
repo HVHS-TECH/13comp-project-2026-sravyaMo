@@ -163,7 +163,7 @@ body {
 .main-layout {
     display: flex;
     gap: 30px;
-    align-items: flex-start;
+    align-items: center;
 }
 
 .lobby-list-panel {
@@ -197,7 +197,7 @@ body {
     transition: 0.2s;
 }
 
-.lobby-item: hover {
+.lobby-item hover {
     background: rgba(255,255,255,0.18);
     transform: scale(1.02);
 }
